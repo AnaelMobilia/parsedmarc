@@ -386,9 +386,9 @@ known samples you want to save to that folder
 :::
 
 :::{warning}
-Elasticsearch 8 change limits policy for shards, restricting by 
-default to 1000. parsedmarc use a shard per analyzed day. If you 
-have more than ~3 years of data, you will need to update this 
+Elasticsearch 8 change limits policy for shards, restricting by
+default to 1000. parsedmarc use a shard per analyzed day. If you
+have more than ~3 years of data, you will need to update this
 limit.
 Check current usage (from Management -> Dev Tools -> Console):
 ```
@@ -404,7 +404,7 @@ Update the limit to 2k per exemple:
 PUT _cluster/settings
 {
   "persistent" : {
-    "cluster.max_shards_per_node" : 2000 
+    "cluster.max_shards_per_node" : 2000
   }
 }
 ```
